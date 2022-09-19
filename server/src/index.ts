@@ -17,6 +17,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 
+/* Home */
+app.get("/",(req :Request, res:Response)=>{
+
+  return res.status(200).json({
+    msg: "You is a Developer!! Congratulations"
+  })
+
+})
+
 /* List All Games*/
 app.get('/games',async (req: Request, res: Response) => {
   const allGames = await prisma.games.findMany({
