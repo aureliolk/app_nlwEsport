@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "api-nlwesports",
+    "name": "server",
     "builds": [
       { "src": "index.ts", "use": "@vercel/node" }
     ],
