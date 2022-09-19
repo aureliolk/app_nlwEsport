@@ -3,17 +3,21 @@
 
 generator client {
   provider = "prisma-client-js"
-}
-
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+   previewFeatures = ["referentialIntegrity"]
 }
 
 // datasource db {
-//   provider = "mysql"
+//   provider = "sqlite"
 //   url      = env("DATABASE_URL")
+
 // }
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("DATABASE_SH_URL")
+  referentialIntegrity = "prisma"
+}
 
 model Ads {
   id           String   @id @default(uuid())
