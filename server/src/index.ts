@@ -7,7 +7,7 @@ import {prisma} from './utils/prisma'
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // For parsing application/json
 app.use(express.json());
