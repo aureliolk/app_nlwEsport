@@ -48,7 +48,7 @@ app.get('/:id/games', (req, res) => __awaiter(void 0, void 0, void 0, function* 
             id
         },
         include: {
-            _count: true
+            Ads: true
         }
     });
     return res.status(200).json(gameId);

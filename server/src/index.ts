@@ -44,7 +44,7 @@ app.get('/:id/games',async (req: Request, res: Response) => {
       id
     },
     include:{
-      _count:true
+      Ads:true
     }   
   })
   return res.status(200).json(gameId)
