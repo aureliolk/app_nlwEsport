@@ -44,7 +44,11 @@ app.get('/:id/games',async (req: Request, res: Response) => {
       id
     },
     include:{
-      Ads:true
+      Ads:{
+        orderBy:{
+          CreatedDate:'desc'
+        }
+      }
     }   
   })
   return res.status(200).json(gameId)
