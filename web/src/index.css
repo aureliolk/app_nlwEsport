@@ -1,7 +1,24 @@
 @tailwind base;
-body{
-    @apply max-w-[1440px] bg-[#121214] text-white
 
+body {
+    @apply max-w-[1440px] bg-[#121214] text-white
 }
+
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Neon Zone Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neon Zone Regular'), url('NeonZone-lgYBe.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neon Zone Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neon Zone Italic'), url('NeonZoneItalic-2OyDK.woff') format('woff');
+}
+

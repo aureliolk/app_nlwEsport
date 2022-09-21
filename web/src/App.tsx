@@ -14,7 +14,7 @@ const App = () => {
   
   return (
     <div className="bg-galaxy bg-no-repeat bg-cover flex flex-col items-center py-20">
-      <img src="./logo.svg" alt="Logo Svg" className="w-72" />
+      <img src="./logov2.svg" alt="Logo Svg" className="w-72" />
       <h1 className="text-6xl font-extrabold my-20">Seu <span className=" text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-green-500 to-yellow-500">Duo</span> está Aqui</h1>
 
 

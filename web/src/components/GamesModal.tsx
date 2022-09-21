@@ -64,29 +64,29 @@ export const GamesModal = ({ children, id, nameGame }: GamesModalProps) => {
             <Dialog.Portal >
                 <Dialog.Overlay className='w-full bg-galaxy bg-cover bg-no-repeat top-0 bottom-0 absolute'>
                     <Dialog.Content className=' fixed inset-0 w-[90%] h-[90%] m-auto p-4 rounded'>
-                        <Dialog.Title> <strong className='text-transparent text-4xl bg-clip-text font-black bg-gradient-to-r from-indigo-500 via-green-500 to-yellow-500 '>{nameGame}</strong> </Dialog.Title>
+                        <Dialog.Title> <strong className='text-transparent text-4xl bg-clip-text font-black bg-gradient-to-r from-indigo-500 via-green-500 to-yellow-500 font-neon-zone'>{nameGame}</strong> </Dialog.Title>
                         <Dialog.Description>Todos os Anuncios</Dialog.Description>
-                        <div className='my-2 rounded grid grid-cols-3 gap-2 scrollbar scrollbar-hidden hover:scrollbar-auto pr-2 h-[90%] auto-rows-max'>
+                        <div className='my-2 rounded grid grid-cols-3 gap-2 scrollbar scrollbar-hidden hover:scrollbar-auto p-2 h-[90%] auto-rows-max'>
                             {allAdsGame ? allAdsGame.map(item => {
                                 return (
-                                    <div key={item.id} className="flex p-4 gap-2 border border-zinc-600 rounded max-h-48 bg-gradient-to-t from-gray-900/50 to-gray-900/50">
+                                    <div key={item.id} className="flex p-4 gap-2 border border-zinc-600 rounded max-h-52 bg-gradient-to-t from-gray-900/50 to-gray-900/50 hover:animate-up-cards">
                                         <User size={35} className='border' />
                                         <div className='text-sm flex flex-col gap-1'>
                                             <div className='flex gap-2 items-center justify-start'><strong className='bg-green-600/10 rounded text-xs px-1 font-black' >Nickname :</strong> {item.nickName}</div>
                                             <div className='flex gap-2 items-center justify-start'><strong className='bg-violet-600/10 rounded text-xs px-1 font-black'>ID Discord :</strong>{item.idDiscord}</div>
                                             <div className='flex gap-2 items-center justify-start'><strong className='bg-yellow-600/10 rounded text-xs px-1 font-black'>Dias de Jogo :</strong>{days(item.daysPlaying)}</div>
                                             <div className='grid grid-cols-2 gap-2'>
-                                                    <div className='flex flex-col bg-green-500/10 rounded text-xs p-1 font-black'>
+                                                    <div className='flex flex-col justify-between bg-green-500/10 rounded text-xs p-1 font-black'>
                                                         <strong >Horario de Inicio</strong>
                                                         <span className='font-normal'>{item.startPlay}</span>
                                                     </div>
-                                                    <div className='flex flex-col bg-red-500/10 rounded text-xs p-1 font-black'>
+                                                    <div className='flex flex-col justify-between bg-red-500/10 rounded text-xs p-1 font-black'>
                                                         <strong >Horario de Termino</strong>
                                                         <span className='font-normal'>{item.endPlay}</span>
                                                     </div>
                                                 </div>
-                                            <div className='flex gap-2 items-center justify-start'>
-                                                <strong>Usar Chat de Voz?</strong> {item.chatVoice}
+                                            <div className='flex gap-2 items-center justify-start text-xs'>
+                                                <strong>Usar Chat de Voz?</strong> {item.chatVoice === "on" ? <div className='bg-green-500 px-3 rounded w-5 flex items-center justify-center'>Sim</div> : <div className='bg-red-500 px-3 rounded w-5 flex items-center justify-center'>Não</div>}
                                             </div>
                                         </div>
                                     </div>

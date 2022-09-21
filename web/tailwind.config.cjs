@@ -9,6 +9,9 @@ module.exports = {
       backgroundImage:{
         galaxy:"url('/bg-galaxy.png')"
       },
+      fontFamily:{
+        "neon-zone":["Neon Zone Regular", "ui-sans-serif", "system-ui"],
+      },
       animation: {
         'up-ads': 'up-ads 1s forwards',
         'up-cards': 'up-cards 1s forwards',
