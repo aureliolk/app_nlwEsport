@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { SectionAds } from "./components/SectionAds"
 import { CardGames } from "./components/CardGames";
 import { UseContexts } from "./contexts/UseContexts";
+import { GamesModal } from "./components/GamesModal";
 
 
 
@@ -26,7 +27,7 @@ const App = () => {
       </div>
 
       <SectionAds />
-      
+
     </div>
 
   )

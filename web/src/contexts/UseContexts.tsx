@@ -29,13 +29,11 @@ export const ContexsProvider = ({children}: ChildrenProps)=>{
     const [cards, setCards] = useState<Cards[]>([])
     const [reloadCard, setReloadCards] = useState(false)
 
-
     useEffect(() => {
       axios.get("https://api-nlwesports.vercel.app/games")
       .then(res => {
         return setCards(res.data)
       })
-    
     },[reloadCard])
     
     return(

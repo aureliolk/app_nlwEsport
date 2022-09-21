@@ -1,6 +1,7 @@
 @tailwind base;
 body{
     @apply max-w-[1440px] bg-[#121214] text-white
+
 }
 @tailwind components;
 @tailwind utilities;
